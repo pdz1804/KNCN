@@ -111,7 +111,7 @@ npm start
 ```
 Start Client i.e., FrontEnd:
 ```
-cd Task-Manager--First-MERN/FrontEnd
+cd KNCN/FrontEnd
 npm install
 npm start or npm run dev
 ```
@@ -125,7 +125,7 @@ We appreciate your interest in contributing to our project! Whether you're a dev
 1. Fork the repository.
 2. Clone your forked repository:
  ```bash
-   git clone https://github.com/john12356/Task-Manager--First-MERN.git
+   git clone https://github.com/pdz1804/KNCN.git
 ```
 ## Issues and Bug Reports
 
@@ -145,7 +145,7 @@ This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LIC
 We greatly appreciate all contributions to this project. Contributors will be acknowledged in our [CONTRIBUTORS.md](CONTRIBUTORS.md) file. Thank you for your support!
 ## Feedback
 
-For any queries and improvements please reach out to johnmoorthi85131@gmail.com
+For any queries and improvements please reach out to quangphunguyen1804@gmail.com
 
 # Thank You
 
