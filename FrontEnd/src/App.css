@@ -5,10 +5,6 @@
   --bg: #EBF3E8;
   --grey: #D2E3C8;
 } */
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 :root {
   --nav: #86a789;
   --prof: #b2c8ba;
@@ -18,7 +14,6 @@
   --text: black;
 }
 
-<<<<<<< HEAD
 /* :root {
   --nav: #8dd490;
   --prof: #b2c8ba;
@@ -28,8 +23,6 @@
   --text: black;
 } */
 
-=======
->>>>>>> origin/main
 * {
   margin: 0;
   padding: 0;

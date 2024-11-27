@@ -38,13 +38,13 @@ const Task = ({ toast, tasks, setTasks }) => {
 
   const addTask = () => {
     if (task.taskName.trim() === "" || task.deadline === "") {
-      toast.error("Please enter task and deadline");
+      toast.error("Please enter task and deadline huhu");
       return;
     }
     const selectedDate = new Date(task.deadline);
     const currentDate = new Date();
-    if (selectedDate <= currentDate) {
-      toast.error("Please select a valid date");
+    if (selectedDate < currentDate) {
+      toast.error("Please select a valid date hahaha");
       return;
     }
     const newTask = {
@@ -109,11 +109,7 @@ const Task = ({ toast, tasks, setTasks }) => {
   return (
     <div className="home-body-conatiner" data-aos="zoom-in">
       <header className="search-bar">
-<<<<<<< HEAD
         <h1>Tasks</h1>
-=======
-        <h1>Task's</h1>
->>>>>>> origin/main
         <input
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

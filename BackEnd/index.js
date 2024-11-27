@@ -5,7 +5,8 @@ const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const authModel = require("./Models/Model");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
@@ -190,24 +191,4 @@ app.listen(PORT, () => {
   console.log(`Server Running On Port : ${PORT} `);
 });
 
-<<<<<<< HEAD
-=======
-app.post('/login-default', async (req, res) => {
-  try {
-    const user = await User.findOne({ email: 'nhat@gmail.com' });
-    if (!user) {
-      return res.status(400).json({ message: 'Default user not found' });
-    }
-
-    req.login(user, (err) => {
-      if (err) {
-        return res.status(500).json({ message: 'Login failed' });
-      }
-      return res.status(200).json({ message: 'Login successful' });
-    });
-  } catch (err) {
-    return res.status(500).json({ message: 'Server error' });
-  }
-});
->>>>>>> origin/main
 module.exports = app;

@@ -9,15 +9,12 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-<<<<<<< HEAD
 const getLocalDate = () => {
   const offset = 7; // UTC+7 for Ho Chi Minh City
   const localDate = new Date(new Date().getTime() + offset * 60 * 60 * 1000);
   return localDate.toISOString().split("T")[0];
 };
 
-=======
->>>>>>> origin/main
 const Profile = ({ tasks }) => {
   const [quote, setQuote] = useState();
   const [author, setAuthor] = useState();
@@ -45,7 +42,6 @@ const Profile = ({ tasks }) => {
       .catch((err) => console.log(err));
   }, []);
 
-<<<<<<< HEAD
   // useEffect(() => {
   //   axios
   //     .get(`${process.env.REACT_APP_API_URL}/task/getTask`)
@@ -61,13 +57,10 @@ const Profile = ({ tasks }) => {
   //     .catch((err) => console.log(err));
   // }, [tasks]);
 
-=======
->>>>>>> origin/main
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/task/getTask`)
       .then((res) => {
-<<<<<<< HEAD
         const today = getLocalDate(); // Use adjusted local date
         const temp = res.data.filter((obj) => {
           const taskDeadline = new Date(obj.task.deadline)
@@ -80,14 +73,6 @@ const Profile = ({ tasks }) => {
         });
         console.log("Filtered Upcoming Tasks:", temp); // Log filtered tasks
         setUpcomingTasks(temp); // Update state
-=======
-        let temp = res.data.filter(
-          (obj) =>
-            obj.done === false &&
-            obj.task.deadline === new Date().toISOString().split("T")[0]
-        );
-        setUpcomingTasks(temp);
->>>>>>> origin/main
       })
       .catch((err) => console.log(err));
   }, [tasks]);

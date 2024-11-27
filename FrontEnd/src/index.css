@@ -11,17 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-<<<<<<< HEAD
 
 *{
   transition: all 0.2s ease-in-out;
 }
 
-=======
-*{
-  transition: all 0.2s ease-in-out;
-}
->>>>>>> origin/main
 :root {
   --nav : #86A789;
   --prof: #B2C8BA;
@@ -30,7 +24,6 @@ code {
   --serBar: #ffff;
   --text: black;
 }
-<<<<<<< HEAD
 
 /* :root {
   --nav: #8dd490;
@@ -47,13 +40,5 @@ code {
   --grey: #393749;
   --bg : #383737;
   --serBar: #7c739d;
-=======
-[data-theme="dark"] {
-  --nav:#2B2A4C;
-  --prof :rgb(46, 45, 45);
-  --grey: #191825;
-  --bg : #000000;
-  --serBar: #635985;
->>>>>>> origin/main
   --text: #fff;
 }

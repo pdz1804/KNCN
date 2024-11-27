@@ -28,11 +28,7 @@ const Dashboard = ({ notes, setNotes, tasks, setTasks, todo, setTodo }) => {
       <header id="dash-header" className="search-bar">
         <h1>Dashboard</h1>
       </header>
-<<<<<<< HEAD
       <main className="body-content">
-=======
-      <main className="body-content ">
->>>>>>> origin/main
         <div className="notes" data-aos="fade-up-right">
           <div className="con-head">
             <p>Notes</p>
@@ -44,11 +40,7 @@ const Dashboard = ({ notes, setNotes, tasks, setTasks, todo, setTodo }) => {
         </div>
         <div className="todos" data-aos="fade-up-left">
           <div className="con-head">
-<<<<<<< HEAD
             <p>Todos</p>
-=======
-            <p>Todo's</p>
->>>>>>> origin/main
             <button onClick={expandTodo} id="all">
               <AiOutlineArrowsAlt color="#F1EAFF" size={18} />
             </button>
