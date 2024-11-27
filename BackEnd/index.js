@@ -155,8 +155,8 @@ app.post("/forgotpass", async (req, res) => {
       port: 465,
       secure: true,
       auth: {
-        user: "jhonmoorthi85131@gmail.com",
-        pass: "klxb xvje ygnr qvbo",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 

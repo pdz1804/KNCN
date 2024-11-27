@@ -61,18 +61,18 @@ const Profile = ({ tasks }) => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/task/getTask`)
       .then((res) => {
-        const today = getLocalDate(); // Use adjusted local date
-        const temp = res.data.filter((obj) => {
+        const today = getLocalDate(); // Get today's date in UTC+7
+        const upcoming = res.data.filter((obj) => {
           const taskDeadline = new Date(obj.task.deadline)
             .toISOString()
-            .split("T")[0];
+            .split("T")[0]; // Normalize task deadline to YYYY-MM-DD
           console.log(
             `Task: ${obj.task.name}, Done: ${obj.done}, Deadline: ${taskDeadline}, Today: ${today}`
           ); // Debug task details
-          return obj.done === false && taskDeadline === today;
+          return obj.done === false && taskDeadline >= today; // Include today and later deadlines
         });
-        console.log("Filtered Upcoming Tasks:", temp); // Log filtered tasks
-        setUpcomingTasks(temp); // Update state
+        console.log("Filtered Upcoming Tasks:", upcoming); // Debug filtered tasks
+        setUpcomingTasks(upcoming); // Update state with filtered tasks
       })
       .catch((err) => console.log(err));
   }, [tasks]);
