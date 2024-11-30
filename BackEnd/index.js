@@ -27,18 +27,48 @@ app.use([
   express.urlencoded({ extended: true }),
 ]);
 
-const sessionStore = new MongoStore({
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB:", err.message);
+  });
+
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: true,
+//     saveUninitialized: true,
+//     store: sessionStore,
+//     cookie: {
+//       maxAge: 1000 * 60 * 60 * 24,
+//     },
+//   })
+// );
+
+const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URL,
-  collectionName: "session",
+  collectionName: "sessions", // Use "sessions" or any other collection name
 });
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true,
+    resave: false, // Recommended to be false
+    saveUninitialized: false, // Recommended to be false
     store: sessionStore,
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24,
+      maxAge: 1000 * 60 * 60 * 24, // 1 day
+      httpOnly: true, // Ensures the cookie is sent only over HTTP(S), not accessible to client-side JS
+      secure: false, // Set to `true` in production with HTTPS
     },
   })
 );
@@ -142,40 +172,40 @@ app.post("/resetPassword/:id/:token", async (req, res) => {
   });
 });
 
-app.post("/forgotpass", async (req, res) => {
-  const { email } = req.body;
-  await authModel.findOne({ email: email }).then((user) => {
-    if (!user) return res.send({ Status: "Enter a valid email" });
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, {
-      expiresIn: "1d",
-    });
-    var transporter = nodemailer.createTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+// app.post("/forgotpass", async (req, res) => {
+//   const { email } = req.body;
+//   await authModel.findOne({ email: email }).then((user) => {
+//     if (!user) return res.send({ Status: "Enter a valid email" });
+//     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, {
+//       expiresIn: "1d",
+//     });
+//     var transporter = nodemailer.createTransport({
+//       service: "gmail",
+//       host: "smtp.gmail.com",
+//       port: 465,
+//       secure: true,
+//       auth: {
+//         user: process.env.EMAIL_USER,
+//         pass: process.env.EMAIL_PASS,
+//       },
+//     });
 
-    var mailOptions = {
-      from: "jhonmoorthi85131@gmail.com",
-      to: email,
-      subject: "Forgot password for task manager",
-      text: `${process.env.FRONTEND_DOMAIN}/ResetPass/${user._id}/${token}`,
-    };
+//     var mailOptions = {
+//       from: "jhonmoorthi85131@gmail.com",
+//       to: email,
+//       subject: "Forgot password for task manager",
+//       text: `${process.env.FRONTEND_DOMAIN}/ResetPass/${user._id}/${token}`,
+//     };
 
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        return res.send({ Status: "success" });
-      }
-    });
-  });
-});
+//     transporter.sendMail(mailOptions, function (error, info) {
+//       if (error) {
+//         console.log(error);
+//       } else {
+//         return res.send({ Status: "success" });
+//       }
+//     });
+//   });
+// });
 
 const authenticator = (req, res, next) => {
   if (!req.isAuthenticated()) {
