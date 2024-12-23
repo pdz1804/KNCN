@@ -34,12 +34,12 @@ Switch to a **dark mode** theme for a more comfortable viewing experience.
 
 | Feature                | Screenshot                                                                                  |
 |------------------------|--------------------------------------------------------------------------------------------|
-| **Login Page**         | ![Login Page](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/e6c16d98-9342-4d37-b17c-7035fcbd77dd) |
-| **Home Page**          | ![Home Page](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/d9e4fc89-d1ad-4604-b610-6842e5e71b48) |
-| **To-Do Page**         | ![To-Do Page](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/45f2bb36-08db-4e4e-9c6d-ea84845469b1) |
-| **Task Page**          | ![Task Page](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/0ac74f42-3851-4102-a2f9-ee609ded1eba) |
-| **Notes Page**         | ![Notes Page](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/a5726406-2b8b-445b-8ee9-01bd1e64d79c) |
-| **Dark Mode**          | ![Dark Mode](https://github.com/John12356/Task-Manager--First-MERN/assets/91779049/30f8cd99-c136-4721-b552-6a146827ed88) |
+| **Login Page**         | ![Login Page](/img/login.PNG) |
+| **Home Page**          | ![Home Page](/img/homepage.PNG) |
+| **To-Do Page**         | ![To-Do Page](/img/todo.PNG) |
+| **Task Page**          | ![Task Page](/img/task.PNG) |
+| **Notes Page**         | ![Notes Page](/img/note.PNG) |
+| **Dark Mode**          | ![Dark Mode](/img/dark.PNG) |
 
 ---
 
