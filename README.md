@@ -104,7 +104,7 @@ JWT_SECRET_KEY=abcdefghi
 ```
 Start server i.e., BackEnd:
 ```
-cd Task-Manager--First-MERN/BackEnd
+cd KNCN/BackEnd
 npm install
 npm start
 ```
