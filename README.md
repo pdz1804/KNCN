@@ -1,3 +1,46 @@
+<div align="center">
+  
+  <h2>VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY</h2>
+  <h3>UNIVERSITY OF TECHNOLOGY</h3>
+  <h3>FACULTY OF COMPUTER SCIENCE AND ENGINEERING</h3>
+  
+  <br />
+  
+  <img src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoasang.png" alt="logo" style="width: 350px; height: auto;">
+  
+  <br />
+  <br />
+
+</div>
+
+<h2 align="center">💡 Professional Skills for Engineers (CO2001) 💡</h2>
+<h2 align="center">Project: TASK MANAGER - MERN</h2>
+<h2 align="center">Semester 241</h2>
+<h3 align="center">Class: CC01</h2>
+
+---
+
+<h2 align="center">⚒️ Languages - Frameworks - Tools ⚒️</h2>
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,javascript,vite,react,nodejs,vscode,github,git,md" alt="Tools and Languages" />
+</div>
+
+---
+
+## Team Members
+
+- **Thái Quang Phát** - 2252606
+- **Trần Nguyễn Thế Nhật** - 2252556
+- **Nguyễn Quang Phú** - 2252621
+- **Nguyễn Tiến Hưng** - 2252280
+
+Here is our team presentation video:
+
+- <a href="https://www.youtube.com/watch?v=pa-a_UpPBX4" target="_blank">YouTube Video Link</a>
+
+---
+
 # 🌟 TASK MANAGER - MERN 🌟
 
 **The ultimate productivity tool** that combines **task management**, **to-do lists**, and **note-taking functionalities** in one place. Efficiently organize, prioritize, and track tasks with a sleek and intuitive interface, including synchronization, reminders, and collaboration features.
